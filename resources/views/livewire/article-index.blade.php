@@ -5,4 +5,8 @@
             <p>{{ $article->teaser }}</p>
         </div>
     @endforeach
+
+    @if ($this->paginator->hasMorePages())
+        <button wire:click="loadMore">Load more</button>
+    @endif
 </div>
