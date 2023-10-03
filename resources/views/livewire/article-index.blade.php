@@ -6,7 +6,9 @@
         </div>
     @endforeach
 
-    <div x-intersect="$wire.loadMore"></div>
+    @if ($this->paginator->hasMorePages())
+        <div x-intersect="$wire.loadMore"></div>
+    @endif
 
     @if ($this->paginator->hasMorePages())
         <button wire:click="loadMore">Load more</button>
