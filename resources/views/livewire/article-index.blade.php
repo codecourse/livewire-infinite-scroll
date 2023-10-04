@@ -7,7 +7,7 @@
     @endforeach
 
     @if ($this->paginator->hasMorePages())
-        <div x-intersect="$wire.loadMore"></div>
+        <div x-intersect="$wire.loadMore" class="h-12 -translate-y-44"></div>
     @endif
 
     @if ($this->paginator->hasMorePages())
